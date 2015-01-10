@@ -1,0 +1,326 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.juan.vectorcalc.MainActivity"
+    tools:ignore="MergeRootFrame" >
+    
+    <LinearLayout
+	    android:layout_gravity="top"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:orientation="vertical"
+	    android:gravity="center">
+	    <HorizontalScrollView
+	        android:id="@+id/horizontalScrollView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" >
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:orientation="horizontal"
+	            android:gravity="" >
+	            <TextView
+			        android:id="@+id/operation"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:text="" 
+			        android:textSize="30sp"
+			        android:paddingTop="25dp"
+			        android:paddingBottom="25dp"/>
+	        </LinearLayout>
+	    </HorizontalScrollView>
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/buttonPlus"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15dp"
+                android:text="+" />
+			<Button
+                android:id="@+id/buttonClear"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15dp"
+                android:text="Clear" />           
+            <Button
+                android:id="@+id/buttonMinus"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15dp"
+                android:text="-" />           
+                           
+        </LinearLayout> 
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal" >
+            
+            <Button
+                android:id="@+id/buttonDot"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:text="@string/dot" />
+
+            <Button
+                android:id="@+id/buttonCross"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:text="@string/cross" /> 
+
+        </LinearLayout>
+
+	    <HorizontalScrollView
+	        android:id="@+id/horizontalScrollView2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" >
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:orientation="horizontal"
+	            android:gravity="" >
+		<TextView
+		    android:id="@+id/answer"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="50sp"
+		    android:paddingTop="20dp"
+		    android:paddingBottom="30dp"
+		    android:layout_gravity="top|center"/>    	
+	        </LinearLayout>
+	    </HorizontalScrollView>	
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="bottom|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" 
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+		
+	        <LinearLayout
+	            android:layout_width="0dip"
+	            android:layout_height="fill_parent"
+	            android:orientation="vertical"
+	            android:layout_weight="1" 
+	            android:gravity="center_horizontal">
+                <TextView
+	                android:id="@+id/vectorLabel"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Saved Vectors" 
+	                android:textSize="18sp"
+	                />
+       	        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal" >
+	       	        <LinearLayout
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:orientation="vertical" >
+       	       	        <LinearLayout
+				            android:layout_width="fill_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="horizontal" >
+		                    <Button
+				              android:id="@+id/vector_a"
+				              style="?android:attr/buttonStyleSmall"
+				              android:layout_width="wrap_content"
+				              android:layout_height="wrap_content"
+				              android:layout_weight="1"
+				              android:text="@string/_a_" />
+		                    <Button
+				              android:id="@+id/vector_b"
+				              style="?android:attr/buttonStyleSmall"
+				              android:layout_width="wrap_content"
+				              android:layout_height="wrap_content"
+				              android:layout_weight="1"
+				              android:text="@string/_b_" />
+		          	        <Button
+				              android:id="@+id/vector_c"
+				              style="?android:attr/buttonStyleSmall"
+				              android:layout_width="wrap_content"
+				              android:layout_height="wrap_content"
+				              android:layout_weight="1"
+				              android:text="@string/_c_" />
+		                    <Button
+				              android:id="@+id/vector_d"
+				              style="?android:attr/buttonStyleSmall"
+				              android:layout_width="wrap_content"
+				              android:layout_height="wrap_content"
+				              android:layout_weight="1"
+				              android:text="@string/_d_" />                        	                        
+		                    <Button
+				              android:id="@+id/vector_e"
+				              style="?android:attr/buttonStyleSmall"
+				              android:layout_width="wrap_content"
+				              android:layout_height="wrap_content"
+				              android:layout_weight="1"
+				              android:text="@string/_e_" />  	       				            
+	       	             </LinearLayout> 
+             	       	 <LinearLayout
+				            android:layout_width="fill_parent"
+				            android:layout_height="wrap_content"
+				            android:orientation="horizontal" >
+		                    <Button
+				              android:id="@+id/vector_f"
+				              style="?android:attr/buttonStyleSmall"
+				              android:layout_width="wrap_content"
+				              android:layout_height="wrap_content"
+				              android:layout_weight="1"
+				              android:text="@string/_f_" />
+		                    <Button
+				              android:id="@+id/vector_g"
+				              style="?android:attr/buttonStyleSmall"
+				              android:layout_width="wrap_content"
+				              android:layout_height="wrap_content"
+				              android:layout_weight="1"
+				              android:text="@string/_g_" />
+		          	        <Button
+				              android:id="@+id/vector_h"
+				              style="?android:attr/buttonStyleSmall"
+				              android:layout_width="wrap_content"
+				              android:layout_height="wrap_content"
+				              android:layout_weight="1"
+				              android:text="@string/_h_" />
+		                    <Button
+				              android:id="@+id/vector_i"
+				              style="?android:attr/buttonStyleSmall"
+				              android:layout_width="wrap_content"
+				              android:layout_height="wrap_content"
+				              android:layout_weight="1"
+				              android:text="@string/_i_" />                        	                        
+		                    <Button
+				              android:id="@+id/vector_j"
+				              style="?android:attr/buttonStyleSmall"
+				              android:layout_width="wrap_content"
+				              android:layout_height="wrap_content"
+				              android:layout_weight="1"
+				              android:text="@string/_j_" />  			                    
+	       	             </LinearLayout> 
+	       	             
+			        </LinearLayout>    
+	       	            
+ 	
+		        </LinearLayout>
+	        </LinearLayout>    
+
+            
+        </LinearLayout>
+
+
+        
+    <TextView
+		 android:id="@+id/selectorLabel"
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+		 android:visibility="visible" 
+		 android:textSize="18sp"
+		 android:gravity="center_horizontal"
+		 android:paddingTop="2dp"  />            	      
+
+    <LinearLayout
+        android:id="@+id/vectorLayout"
+        android:visibility="visible"
+        android:paddingTop="2dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+ 
+        <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="30sp"
+           android:layout_weight="4"
+           android:paddingLeft="12sp"
+           android:text="@string/lVector"  />	 	        
+	    <EditText
+	        android:id="@+id/xText"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:maxLength="5"
+	        android:layout_weight="25"
+	        android:inputType="numberDecimal|numberSigned" /> 
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="35sp"
+           android:layout_weight="2"
+           android:paddingLeft="5sp"
+           android:text="@string/coma" />
+	    <EditText
+	        android:id="@+id/yText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:maxLength="5"
+			android:layout_weight="25"
+	        android:inputType="numberDecimal|numberSigned"/> 	
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="35sp"
+           android:layout_weight="2"
+           android:paddingLeft="5sp"           
+           android:text="@string/coma" />
+	    <EditText
+	        android:id="@+id/zText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:layout_weight="25"
+			android:maxLength="5"
+	        android:inputType="numberDecimal|numberSigned"/> 
+        <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="4"
+           android:textSize="30sp"
+           android:text="@string/rVector" />	 	                                   	                        
+   	</LinearLayout>
+   	
+    <LinearLayout
+        android:id="@+id/setSaveLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/buttonInsert"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/insert" />
+	</LinearLayout>	
+
+        
+    </LinearLayout>
+
+</FrameLayout>

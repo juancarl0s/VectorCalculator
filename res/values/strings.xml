@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vector Calculator</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="dot">&#x00B7;</string>
+    <string name="cross">&#x00D7;</string>
+    <string name="delete">&#x2190;</string>
+    <string name="lVector">&lt;</string>
+    <string name="rVector">&gt;</string>
+    <string name="_a_">&lt;A></string>
+    <string name="_b_">&lt;B></string>
+    <string name="_c_">&lt;C></string>
+    <string name="_d_">&lt;D></string>
+    <string name="_e_">&lt;E></string>
+    <string name="_f_">&lt;F></string>
+    <string name="_g_">&lt;G></string>
+    <string name="_h_">&lt;H></string>
+    <string name="_i_">&lt;I></string>
+    <string name="_j_">&lt;J></string>
+    <string name="_">,</string>
+    <string name="coma">,</string>
+    <string name="insert">Insert</string>
+
+</resources>
